@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 
@@ -33,6 +34,7 @@ int main(void)
 	}
 
 
+
 	bef1 = (bef / l);
 	bef2 = (bef % l);
 	aft1 = (aft / l);
@@ -47,7 +49,6 @@ int main(void)
 		bef1 = aft1 - bef1;
 		aft2 = aft2 + bef2;
 		bef2 = aft2 - bef2;
-	}
-	printf("\n");
+	}	printf("\n");
 	return (0);
 }
