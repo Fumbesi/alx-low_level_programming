@@ -3,13 +3,17 @@
 # Rule to build the executable
 all: school
 
+# -----------------------------------------
 # Compile and link the 'school' executable
 school: main.c utils.c
-    gcc -o school main.c utils.c
+	gcc -o school main.c utils.c
 
+# -----------------------------------------
 # Clean rule to remove generated files
 clean:
-    rm -f school
+	rm -f school
 
+# -----------------------------------------
 # Phony targets (targets that aren't real files)
 .PHONY: all clean
+
