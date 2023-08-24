@@ -3,5 +3,16 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 
-all: $(OBJ)
-        $(CC) $(OBJ) -o $(NAME)
+.PHONY: all
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Rule to generate object files from source files
+%.o: %.c
+	$(CC) -c $< -o $@
+
+clean:
+	rm -f $(OBJ) $(NAME)
